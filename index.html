@@ -27,11 +27,24 @@
       margin-top: 30vh;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
+
+    /* AJOUT : Style du GIF en bas à gauche */
+    .gif-bottom-left {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 120px;   /* Change la taille si tu veux */
+      z-index: 9999;
+      pointer-events: none; /* Pour ne pas bloquer les clics derrière */
+    }
   </style>
 </head>
 <body>
   <video id="camera" autoplay playsinline muted></video>
   <div class="overlay">c'est vraiment super</div>
+
+  <!-- AJOUT : ton GIF ici -->
+  <img src="cochon1.gif" class="gif-bottom-left" />
 
   <script>
     const video = document.getElementById('camera');
